@@ -1,0 +1,39 @@
+<!ELEMENT catalogo (peliculas, series, libros, inspiraciones)> <!-- El elemento raíz <catalogo> contiene cuatro subelementos: peliculas, series, libros e inspiraciones -->
+
+<!-- Películas -->
+<!ELEMENT peliculas (pelicula+)> <!-- <peliculas> debe contener uno o más elementos <pelicula> -->
+<!ELEMENT pelicula (titulo, descripcion, imagen?, ranking)> <!-- Cada <pelicula> debe contener <titulo>, <descripcion> y <ranking>. <imagen> es opcional -->
+<!ATTLIST pelicula
+  id ID #REQUIRED <!-- El atributo 'id' es obligatorio y debe ser un identificador único (ID) -->
+  genero CDATA #REQUIRED <!-- El atributo 'genero' es obligatorio y debe ser un valor de tipo cadena de caracteres (CDATA) -->
+  anio CDATA #IMPLIED> <!-- El atributo 'anio' es opcional y debe ser una cadena de caracteres (CDATA) -->
+
+<!-- Series -->
+<!ELEMENT series (serie+)> <!-- <series> debe contener uno o más elementos <serie> -->
+<!ELEMENT serie (titulo, descripcion, imagen?, ranking)> <!-- Cada <serie> debe contener <titulo>, <descripcion> y <ranking>. <imagen> es opcional -->
+<!ATTLIST serie
+  id ID #REQUIRED <!-- El atributo 'id' es obligatorio y debe ser un identificador único (ID) -->
+  genero CDATA #REQUIRED <!-- El atributo 'genero' es obligatorio y debe ser un valor de tipo cadena de caracteres (CDATA) -->
+  anio CDATA #IMPLIED <!-- El atributo 'anio' es opcional y debe ser una cadena de caracteres (CDATA) -->
+  basadaEn IDREF #IMPLIED> <!-- El atributo 'basadaEn' es opcional y hace referencia a un identificador de inspiración (IDREF) -->
+
+<!-- Libros -->
+<!ELEMENT libros (libro+)> <!-- <libros> debe contener uno o más elementos <libro> -->
+<!ELEMENT libro (titulo, descripcion, imagen?, ranking)> <!-- Cada <libro> debe contener <titulo>, <descripcion> y <ranking>. <imagen> es opcional -->
+<!ATTLIST libro
+  id ID #REQUIRED <!-- El atributo 'id' es obligatorio y debe ser un identificador único (ID) -->
+  genero CDATA #REQUIRED <!-- El atributo 'genero' es obligatorio y debe ser un valor de tipo cadena de caracteres (CDATA) -->
+  anio CDATA #IMPLIED> <!-- El atributo 'anio' es opcional y debe ser una cadena de caracteres (CDATA) -->
+
+<!-- Inspiraciones -->
+<!ELEMENT inspiraciones (inspiracion+)> <!-- <inspiraciones> debe contener uno o más elementos <inspiracion> -->
+<!ELEMENT inspiracion (nombre)> <!-- Cada <inspiracion> debe contener un solo elemento <nombre> -->
+<!ATTLIST inspiracion
+  id ID #REQUIRED> <!-- El atributo 'id' es obligatorio y debe ser un identificador único (ID) -->
+
+<!-- Elementos comunes -->
+<!ELEMENT titulo (#PCDATA)> <!-- El elemento <titulo> contiene texto (PCDATA) -->
+<!ELEMENT descripcion ANY> <!-- El elemento <descripcion> puede contener cualquier tipo de contenido (ANY) -->
+<!ELEMENT ranking (#PCDATA)> <!-- El elemento <ranking> contiene texto (PCDATA) -->
+<!ELEMENT imagen (#PCDATA)> <!-- El elemento <imagen> contiene texto (PCDATA), que generalmente es una URL -->
+<!ELEMENT nombre (#PCDATA)> <!-- El elemento <nombre> contiene texto (PCDATA) -->

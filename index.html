@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Agregar al Carrito</title>
+    <!-- Enlace a mi hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+            <div class="logo">
+                <h1>Cine, Series y Libros</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#Cuestionario"><b><i>Cuestionario</i></b></a>
+                    </li>
+                    <li>
+                        <a href="#Compra"><b><i>Compra</i></b></a>
+                    </li>
+                    <li>
+                        <a href="#Jugar"><b><i>Jugar</i></b></a>
+                    </li>
+                    <li>
+                        <a href="#Personalizar"><b><i>Personalizar</i></b></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    <!-- Contenedor general centrado -->
+    <div class="container">
+
+        <!-- Aquí estoy creando una sección para generar contraseñas automáticamente -->
+        <div>
+            <h2>Generador de Contraseñas</h2>
+            <button id="generar-password">Generar contraseña</button>
+            <input type="text" id="password-generada" readonly />
+        </div>
+
+        <!-- En este formulario hago la validación de campos básicos como nombre, email, teléfono y contraseña -->
+         <section id="Cuestionario">
+        <div>
+            <h2>Formulario con Validación</h2>
+            <form id="validador-form">
+                <input type="text" id="val-nombre" placeholder="Nombre" required><br>
+                <input type="text" id="val-apellidos" placeholder="Apellidos" required><br>
+                <input type="email" id="val-email" placeholder="Email" required><br>
+                <input type="tel" id="val-telefono" placeholder="Teléfono" required><br>
+                <input type="password" id="val-pass" placeholder="Contraseña" required><br>
+                <input type="password" id="val-pass2" placeholder="Repite Contraseña" required><br>
+
+                 <div id="fuerza-pass" style="margin-bottom: 10px;"></div>
+
+                <input type="text" id="val-pais" placeholder="País" required><br>
+                <input type="text" id="val-ciudad" placeholder="Ciudad" required><br>
+
+                <button type="submit">Enviar</button>
+
+                <!-- Aquí voy a mostrar mensajes de validación dentro del formulario -->
+                <div id="mensaje-validacion"></div>
+            </form>
+        </div>
+        </section>
+
+        <!-- Este es el formulario principal para que el usuario agregue artículos al carrito -->
+         <section id="Compra">
+        <h1>Agregar artículos al carrito</h1>
+        <form id="form-carrito">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required />
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="0" required />
+
+            <!-- Aquí elijo la categoría del artículo -->
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" required>
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="pelicula">Película</option>
+                <option value="serie">Serie</option>
+                <option value="libro">Libro</option>
+            </select>
+
+            <!-- Esta lista se va a actualizar dinámicamente según la categoría seleccionada -->
+            <label for="item">Artículo:</label>
+            <select id="item" required>
+                <option value="" disabled selected>Primero elige categoría</option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" min="1" value="1" required />
+
+            <button type="submit">Agregar al carrito</button>
+        </form>
+
+        <!-- Aquí muestro un resumen de cuántos artículos hay en el carrito y el total -->
+        <div id="carrito-info">Artículos en el carrito: 0 | Total: $0</div>
+
+        <!-- Este botón aparece solo si hay productos para pagar -->
+        <button id="btn-pagar" style="display:none; margin-top: 1rem;">Pagar</button>
+
+        </section>
+
+        <!-- Este es el modal que muestro cuando el usuario quiere pagar -->
+        <div id="modal-pago" style="
+            display:none;
+            position: fixed;
+            top:0; left:0; right:0; bottom:0;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        ">
+            <div style="
+                background: white;
+                padding: 1.5rem;
+                border-radius: 8px;
+                max-width: 400px;
+                width: 90%;
+            ">
+                <h2>Formulario de Pago</h2>
+                <form id="form-pago">
+                    <!-- Aquí el usuario ingresa los datos de su tarjeta -->
+                    <label for="tarjeta">Número de tarjeta:</label>
+                    <input type="text" id="tarjeta" required pattern="\d{16}" placeholder="1234567812345678" maxlength="16" />
+
+                    <label for="nombre-tarjeta">Nombre en la tarjeta:</label>
+                    <input type="text" id="nombre-tarjeta" required />
+
+                    <label for="fecha-exp">Fecha de expiración:</label>
+                    <input type="month" id="fecha-exp" required />
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" required pattern="\d{3}" maxlength="3" />
+
+                    <button type="submit">Confirmar pago</button>
+                    <button type="button" id="btn-cerrar-modal" style="margin-left:10px;">Cancelar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Aquí muestro un resumen final después del pago -->
+        <div id="resumen-compra" style="display:none;">
+            <h2>Resumen de la compra</h2>
+            <ul id="lista-articulos"></ul>
+            <p><strong>Total a pagar: $<span id="total-pagar">0</span></strong></p>
+        </div>
+
+        <!-- Esta sección es un pequeño juego que hice para ofrecer descuentos -->
+         <section id="Jugar">
+        <div class="juego">
+            <h2>Trivia por Descuento</h2>
+            <button id="btn-jugar">Jugar Trivia</button>
+            <p id="resultado-juego" style="margin-top:1rem; font-weight:bold;"></p>
+        </div>
+        </section>
+
+        <!-- Aquí dejo al usuario cambiar el color del fondo a su gusto -->
+         <section id="Personalizar">
+        <div class="color-container">
+            <h2>Personaliza el fondo del contenido</h2>
+            <input type="color" id="selector-color" />
+            <button id="aplicar-color">Aplicar color</button>
+        </div>
+
+    </div>
+
+    </section>
+
+    <footer>
+            <p>2025 Cine y Series. Alba Rodriguez</p>
+    </footer>
+
+    <!-- Enlace a mi archivo JavaScript con toda la lógica -->
+    <script src="carrito.js"></script>
+</body>
+</html>

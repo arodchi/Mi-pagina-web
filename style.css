@@ -1,0 +1,165 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten el tamaño del elemento */
+}
+
+/* Body y fuentes */
+body {
+    font-family: Arial, sans-serif; /* Fuente básica */
+    background-color: #f9f9f9; /* Fondo claro */
+    color: #333; /* Texto en gris oscuro */
+    background: linear-gradient(to right, #d6a6f2, #ffffff); /* Gradiente suave lilas de izquierda a derecha */
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #c08ae0, #9b46b5); /* Gradiente rosa-lila a lila intenso */
+    color: white; /* Texto blanco */
+    padding: 20px 0; /* Espaciado en el header */
+    text-align: center; /* Centrado del texto */
+}
+
+header h1 {
+    font-size: 2.5em; /* Tamaño grande para el título */
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style-type: none; /* Quita los puntos de lista */
+    padding: 0; /* Elimina el padding de la lista */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+nav ul li {
+    display: inline; /* Los elementos de la lista se mostrarán en línea */
+    margin-right: 20px; /* Espaciado entre los elementos */
+}
+
+nav ul li a {
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1.2em; /* Tamaño de texto más grande */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+    color: #f2c0f2; /* Color lila suave en hover */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Elimina el espacio entre las celdas */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+table th, table td {
+    padding: 12px; /* Espaciado en las celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Línea sutil debajo de las celdas */
+}
+
+table th {
+    background-color: #9b46b5; /* Fondo lila suave para los encabezados */
+    color: white; /* Texto blanco */
+    font-size: 1.2em; /* Tamaño de texto más grande */
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo gris claro en las filas pares */
+}
+
+table tr:hover {
+    background-color: #f0d3e3; /* Fondo lila claro al pasar el mouse */
+}
+
+/* Secciones principales */
+main {
+    padding: 20px; /* Espaciado alrededor del contenido principal */
+}
+
+section {
+    margin-bottom: 40px; /* Espaciado entre las secciones */
+}
+
+h2 {
+    font-size: 2em; /* Tamaño grande para los títulos de las secciones */
+    margin-bottom: 20px; /* Espaciado inferior */
+    color: #9b46b5; /* Color lila suave */
+}
+
+/* Contenedor de artículos */
+.contenedor {
+    display: grid; /* Usamos grid para un diseño flexible */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Las columnas se adaptan al tamaño de la pantalla */
+    gap: 20px; /* Espaciado entre los artículos */
+}
+
+.item {
+    background-color: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Agranda ligeramente el artículo al pasar el mouse */
+}
+
+.item img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-bottom: 2px solid #ddd; /* Línea sutil debajo de la imagen */
+}
+
+.item h3 {
+    padding: 10px; /* Espaciado alrededor del título */
+    font-size: 1.4em; /* Tamaño de texto más grande */
+    text-align: center; /* Centra el texto */
+    color: #9b46b5; /* Color lila */
+}
+
+.item p {
+    padding: 0 10px; /* Espaciado horizontal */
+    color: #555; /* Color de texto gris oscuro */
+    text-align: center; /* Centra el texto */
+}
+
+.item a {
+    display: block; /* Hace que el enlace ocupe todo el ancho del contenedor */
+    padding: 10px; /* Espaciado en el enlace */
+    background-color: #9b46b5; /* Fondo lila suave */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 0 0 8px 8px; /* Bordes redondeados en la parte inferior */
+}
+
+.item a:hover {
+    background-color: #7a2b8d; /* Fondo lila oscuro al pasar el mouse */
+    opacity: 0.8; /* Transición suave en la opacidad */
+}
+
+/* Footer */
+footer {
+    background-color: #9b46b5; /* Fondo lila suave */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espaciado en el pie */
+    position: relative; /* Posición relativa para asegurar que se ubique bien al fondo */
+    bottom: 0; /* Alinea al fondo de la página */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 40px; /* Espaciado superior */
+}
+
+footer a {
+    color: white; /* Texto blanco para los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+}

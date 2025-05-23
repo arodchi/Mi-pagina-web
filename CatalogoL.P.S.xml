@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Declaración del tipo de archivo XML y su codificación -->
+<!DOCTYPE catalogo SYSTEM "CatalogoL.P.S.dtd"> <!-- Declaración de un DTD externo que define la estructura del XML -->
+<?xml-stylesheet type="text/xsl" href="CatalogoL.P.S.xsl"?> <!-- Enlace a una hoja de estilo XSL para transformar el XML a HTML u otro formato -->
+<catalogo> <!-- Elemento raíz que engloba todo el catálogo -->
+<!-- Sección de películas -->
+    <peliculas>
+        <pelicula id="p1" genero="Fantasía, Aventura" anio="2014">
+            <titulo>Maléfica</titulo>
+            <descripcion>Maléfica es una bella hada con un corazón puro y unas asombrosas alas negras. Crece en un entorno idílico, un apacible reino en el bosque limítrofe con el mundo de los hombres, hasta que un día un ejército de invasores humanos amenaza la armonía de su país. Maléfica se erige entonces en la protectora de su reino, pero un día es objeto de una despiadada e inesperada traición, un hecho triste y doloroso que endurecerá su corazón, y la llevará a lanzar una maldición.</descripcion>
+            <imagen>https://media.themoviedb.org/t/p/w300_and_h450_bestv2/i8qn2A0Qfjj45EXlZVt92WnX7iH.jpg</imagen>
+            <ranking>1</ranking>
+        </pelicula>
+        <pelicula id="p2" genero="Acción, Comedia, Navidad" anio="2023">
+            <titulo>Red One</titulo>
+            <descripcion>Red One es una película de acción y comedia navideña, protagonizada por Dwayne Johnson y Chris Evans. La trama sigue a Callum Drift (Johnson), jefe de seguridad del Polo Norte, quien se asocia con Jack O'Malley (Evans), un hacker y cazarrecompensas, para rescatar a Santa Claus (J.K. Simmons) tras su secuestro por un grupo de operaciones encubiertas. Juntos deben enfrentarse a criaturas mitológicas como Krampus y la bruja Grýla, mientras navegan por un mundo secreto.</descripcion>
+            <imagen>https://pics.filmaffinity.com/red_one-326062250-large.jpg</imagen>
+            <ranking>2</ranking>
+        </pelicula>
+        <pelicula id="p3" genero="Aventura, Comedia, Familiar" anio="2025">
+            <titulo>Lilo y Stitch</titulo>
+            <descripcion>Lilo (Maia Kealoha), una niña hawaiana que vive con su hermana mayor Nani (Sydney Agudong), tras quedar huérfanas. Sin embargo, su vida cambia cuando, en su búsqueda por adoptar un perrito, se encuentra con el Experimento 626, un extraterrestre creado para causar destrucción. Remake en imagen real de "Lilo y Stitch". 
+                            Narra la historia de una niña hawaiana solitaria y un extraterrestre fugitivo que la ayuda a recomponer su familia rota.</descripcion>
+            <imagen>https://lumiere-a.akamaihd.net/v1/images/image_01f8d16d.jpeg?region=0%2C0%2C540%2C810</imagen>
+            <ranking/> <!-- No tiene ranking (Elemento vacío) -->
+        </pelicula>
+        <pelicula id="p4" genero="Comedia, Fantástico" anio="2025">
+            <titulo>Ponte en mi lugar de nuevo</titulo>
+            <descripcion>La película Ponte en mi lugar (Freaky Friday) es una comedia fantástica de 2003 dirigida por Mark Waters y protagonizada por Jamie Lee Curtis y Lindsay Lohan. La historia sigue a Tess Coleman (Curtis), una madre viuda y psicoterapeuta, y su hija adolescente Anna (Lohan), quienes tienen una relación tensa debido a sus diferencias generacionales y estilos de vida. Tras discusiones, un hechizo provocado por dos galletas de la fortuna provoca que ambas intercambien cuerpos.</descripcion>
+            <imagen>https://lumiere-a.akamaihd.net/v1/images/image_c38e4590.jpeg?region=0%2C0%2C540%2C810</imagen>
+            <ranking/>
+        </pelicula>
+        <pelicula id="p5" genero="Misterio, Suspenso" anio="2018">
+            <titulo>Otro pequeño favor</titulo>
+            <descripcion>Stephanie (Anna Kendrick) ha continuado con su vlog y ha escrito un libro sobre Emily (Blake Lively). Emily, quien había sido encarcelada, regresa afirmando que su prometido, Dante, la liberó. Invita a Stephanie a su lujosa boda en Capri, pero durante la celebración, se producen asesinatos que reavivan viejos misterios. Se descubre que la verdadera culpable es Charity, la hermana gemela perdida de Emily, quien había sido criada por su tía estafadora, Linda.</descripcion>
+            <imagen>https://pics.filmaffinity.com/another_simple_favor-325262759-large.jpg</imagen>
+            <ranking>3</ranking>
+        </pelicula>
+    </peliculas>
+    <!-- Sección de series -->
+    <series>
+        <serie id="s1" genero="Suspenso, Ciencia Ficción, Misterio" anio="2016" basadaEn="i1">
+            <titulo>Stranger Things</titulo>
+            <descripcion>Stranger Things es una serie de suspense y ciencia ficción ambientada en los años 80. En el pueblo de Hawkins, Indiana, un grupo de amigos descubre una dimensión alternativa, el "Upside Down", mientras busca a su amigo desaparecido. Con experimentos secretos, criaturas aterradoras y una niña con poderes especiales.</descripcion>
+            <imagen>https://media.themoviedb.org/t/p/w300_and_h450_bestv2/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg</imagen>
+            <ranking>1</ranking>
+        </serie>
+        <serie id="s2" genero="Ciencia Ficción, Aventura, Acción" anio="2019">
+            <titulo>The Mandalorian</titulo>
+            <descripcion>The Mandalorian es una serie de ciencia ficción ambientada en el universo de Star Wars. La historia sigue a Din Djarin, un cazarrecompensas mandaloriano que recorre la galaxia tras la caída del Imperio. En su viaje, encuentra a Grogu, una criatura sensible a la Fuerza, y juntos enfrentan enemigos, aventuras y secretos del pasado.</descripcion>
+            <imagen>https://media.themoviedb.org/t/p/w300_and_h450_bestv2/iLg3DzrwCDsHNovNaWx5JnQAsiV.jpg</imagen>
+            <ranking>2</ranking>
+        </serie>
+        <serie id="s3" genero="Suspenso, Drama" anio="2018">
+            <titulo>You</titulo>
+            <descripcion>Cuando un brillante administrador de librería se cruza con un aspirante a escritor, utiliza Internet y las redes sociales para reunir los detalles más íntimos y acercarse a ella. Un enamoramiento encantador e incómodo rápidamente se convierte en obsesión mientras quita silenciosamente y estratégicamente cada obstáculo, y persona, en su camino.</descripcion>
+            <imagen>https://media.themoviedb.org/t/p/w300_and_h450_bestv2/ligowe4x7OLEMVV7vTFyvkQaHk0.jpg</imagen>
+            <ranking>3</ranking>
+        </serie>
+
+        <serie id="s4" genero="Fantasía, Misterio" anio="2018">
+            <titulo>El descubrimiento de las brujas</titulo>
+            <descripcion>Diana Bishop es una académica que huye de ser una bruja, pero que tras descubrir un antiguo manuscrito de alquimia en la Biblioteca es la protagonista de un misterio. En el camino se encontrará con Matthew Clairmont quien tiene un secreto familiar: que es un vampiro.</descripcion>
+            <imagen>https://media.themoviedb.org/t/p/w300_and_h450_bestv2/sDKIDRsscYQKk8YRrSbhKkT5o8C.jpg</imagen>
+            <ranking>4</ranking>
+        </serie>
+
+        <serie id="s5" genero="Misterio, Sobrenatural" anio="2018">
+            <titulo>Las escalofriantes aventuras de Sabrina</titulo>
+            <descripcion>Las escalofriantes aventuras de Sabrina es una serie de misterio sobrenatural que sigue a Sabrina Spellman, una joven mitad bruja y mitad humana que debe decidir entre el mundo de la magia y la vida con sus amigos mortales. Enfrentando fuerzas oscuras y secretos familiares.</descripcion>
+            <imagen>https://pics.filmaffinity.com/chilling_adventures_of_sabrina-595796535-mmed.jpg</imagen>
+            <ranking>5</ranking>
+        </serie>
+
+    </series>
+    <!-- Sección de libros -->
+    <libros>
+        <libro id="l1" genero="Ciencia Ficción, Aventura" anio="1965">
+            <titulo>Dune</titulo>
+            <descripcion>En el desértico planeta Arrakis, el agua es el bien más preciado y llorar a los muertos, el símbolo de máxima prodigalidad. Pero algo hace de Arrakis una pieza estratégica para los intereses del Emperador, las Grandes Casas y la Cofradía, los tres grandes poderes de la galaxia. Arrakis es el único origen conocido de la melange, preciosa especia y uno de los bienes más codiciados del universo.</descripcion>
+            <imagen>https://www.indiependent.co.uk/wp-content/uploads/2020/06/A1u2fY5yTL-scaled.jpg</imagen>
+            <ranking>1</ranking>
+        </libro>
+
+        <libro id="l2" genero="Fantasía, Aventura, Magia" anio="1997-2007">
+            <titulo>Harry Potter</titulo>
+            <descripcion>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</descripcion>
+            <imagen>https://cdn.culturagenial.com/es/imagenes/harry-potter-libros-1-cke.jpg</imagen>
+            <ranking>2</ranking>
+        </libro>
+        <libro id="l3" genero="Fantasía, Aventura, Magia" anio="2023">
+            <titulo>Alas de sangre</titulo>
+            <descripcion>La historia sigue a Violet Sorrengail, una joven obligada a ingresar al Cuadrante de Jinetes de Dragones en el Colegio de Guerra de Basgiath, donde solo los más fuertes sobreviven. En un mundo de magia, traiciones y secretos ocultos, Violet deberá enfrentarse a desafíos mortales mientras lucha por su lugar entre la élite de Navarre.</descripcion>
+            <imagen>https://cdn.kobo.com/book-images/Images/9b675ece-dde6-433b-9c01-78a920f155d2/500/500/False/image.jpg</imagen>
+            <ranking>3</ranking>
+        </libro>
+
+        <libro id="l4" genero="Distopía, Aventura" anio="2010">
+            <titulo>Amanecer en la cosecha</titulo>
+            <descripcion>La novela sigue a Haymitch Abernathy, un joven del Distrito 12 que debe luchar por su supervivencia en los 50º Juegos del Hambre, también conocidos como el Segundo Vasallaje de los Veinticinco. Enfrentando un Capitolio despiadado, tributos letales y una arena llena de peligros, Haymitch deberá utilizar toda su astucia para salir con vida.</descripcion>
+            <imagen>https://m.media-amazon.com/images/I/71lKRCn6FcL._SL1500_.jpg</imagen>
+            <ranking>4</ranking>
+        </libro>
+
+        <libro id="l5" genero="Fantasía, Aventura, Mitología" anio="2005">
+            <titulo>El ladrón del rayo</titulo>
+            <descripcion>El ladrón del rayo es el primer libro de la saga Percy Jackson y los dioses del Olimpo, escrita por Rick Riordan. La historia sigue a Percy Jackson, un adolescente que descubre que es un semidiós, hijo de Poseidón, el dios del mar. Cuando el rayo maestro de Zeus es robado, Percy se convierte en el principal sospechoso y debe embarcarse en una peligrosa misión para recuperarlo y evitar una guerra entre los dioses.</descripcion>
+            <imagen>https://1.bp.blogspot.com/-mF20IBnjFNY/WD6YSFLMo8I/AAAAAAAAAYg/Xu5wsH5fV_4sc_GTuL6De3ZrDKt3F-kNwCLcB/s1600/descargar-libro-el-ladron-del-rayo-en-pdf-epub-mobi-o-leer-online-370x530.jpg</imagen>
+            <ranking>5</ranking>
+        </libro>
+    </libros>
+    <!-- Sección de inspiraciones -->
+    <inspiraciones>
+    <inspiracion id="i1"> <!-- ID de la inspiración -->
+        <nombre>Proyecto Montauk</nombre> <!-- Nombre de la inspiración -->
+    </inspiracion>
+</inspiraciones>
+
+</catalogo> <!-- Fin del elemento raíz -->
